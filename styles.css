@@ -503,11 +503,19 @@ body {
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   padding: 32px 24px;
-  max-width: 300px;
+  max-width: 400px;
   margin: 32px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  .signup-form {
+  
+  max-width: 320px;
+  
+}
 }
 
 .signup-form label {
