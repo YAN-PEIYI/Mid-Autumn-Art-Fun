@@ -221,7 +221,7 @@ body {
 /* 標題圖片自適應 */
 .responsive-title {
   display: block;
-  width: 70%;   /* 寬度隨容器縮放 */
+  width: 80%;   /* 寬度隨容器縮放 */
   max-width: 600px; /* 可選：設定最大寬度 */
   height: auto;  /* 高度自動保持比例 */
   margin: 20px auto; /* 水平置中，並加垂直間距 */
@@ -306,6 +306,7 @@ body {
 @media (max-width: 600px) {
   .cloud-text {
     font-size: 0.8rem;
+    margin: 10px;
 
   }
 }
@@ -502,7 +503,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   padding: 32px 24px;
-  max-width: 400px;
+  max-width: 320px;
   margin: 32px auto;
   display: flex;
   flex-direction: column;
