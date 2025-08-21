@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mid-Autumn Art & Fun</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akari&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/icon.png" type="image/x-icon"/>
+  
+</head>
+
+
+
+<body>
+<!-- 星空容器 -->
+<div class="star-container"></div>
+
+<!-- 原本的內容 -->
+<img src="img/title.png" alt="title" class="responsive-title">
+<div class="logo-container">
+  <img src="img/rabbit.png" alt="動物大冒險地圖" class="map-image jump-logo">
+  <img src="img/logo-bg.png" alt="背景圖" class="logo-bg">
+</div>
+<img src="img/time.png" alt="title" class="responsive-title">
+
+<div class="cloud-container">
+  <div class="cloud-text">
+    <p>小手大創意，中秋最有趣！<br>
+        Little hands, big creativity — Mid-Autumn is the most fun! <br><br>
+       一起來體驗滿滿節慶氛圍，從美味到藝術，玩出專屬於你們的中秋回憶<br>Come and experience the festive vibes, from tasty treats to artsy crafts, and create your own special Mid-Autumn memories.
+    </p>
+  </div>
+</div>
+<img src="img/food.png" alt="title" class="responsive-image">
+
+  <div class="section-header">
+    <h1 class="page-title">活動說明┃EVENT INFO</h1>
+    <hr class="divider">
+  </div>
+  <div class="info-grid">
+    <div class="info-item">
+      <h3>報名費8元<br><span class="en-title">Only $8!</span></h3>
+      <p>
+        體驗驚喜價，請至下方頁面報名<br>
+        <span class="en-text">Join at our surprise price — sign up now!</span>
+      </p>
+    </div>
+    <div class="info-item">
+      <h3>三種手作，一次滿足<br><span class="en-title">3 Fun Crafts in One Go!</span></h3>
+      <p>
+        馬賽克杯墊、蛋黃酥、 彩色糰子<br>
+        <span class="en-text">Mosaic Coaster、Egg Yolk Pastry、Colorful Dango</span>
+      </p>
+    </div>
+    <div class="info-item">
+      <h3>神秘小禮<br><span class="en-title">Plus a Secret Surprise!</span></h3>
+      <p>
+        活動結束，還有神秘小禮讓你帶回家！<br>
+        <span class="en-text">A little secret gift is waiting for you to bring home!</span>
+      </p>
+    </div>
+  </div>
+  
+  <div class="section-header">
+    <h1 class="page-title">活動流程<br>EVENT SCHEDULE</h1>
+    <hr class="divider">
+  </div>
+  
+  <div class="schedule-cards">
+    <div class="schedule-card">
+      <div class="time">05:00–05:20</div>
+      <div class="activity">📮 活動報到 & 領材料<br><span class="en-text">Check-in & Pick-up</span></div>
+    </div>
+  
+    <div class="schedule-card">
+      <div class="time">05:20–05:50</div>
+      <div class="activity">🥮 DIY:蛋黃酥<br><span class="en-text">DIY:Egg Yolk Pastry</span></div>
+    </div>
+  
+    <div class="schedule-card">
+      <div class="time">05:50–06:20</div>
+      <div class="activity">🍡 DIY:彩色糰子<br><span class="en-text">DIY:Colorful Dango</span></div>
+    </div>
+    <div class="schedule-card">
+      <div class="time">06:20–06:50</div>
+      <div class="activity">💠 DIY:馬賽克杯墊<br><span class="en-text">DIY:Mosaic Coaster</span></div>
+    </div>
+    <div class="schedule-card">
+      <div class="time">07:00–07:30</div>
+      <div class="activity">🎑 中秋故事分享<br><span class="en-text">Mid-Autumn Story Sharing</span></div>
+    </div>
+
+
+  </div>
+  <!-- 報名表單區塊 -->
+  <div class="section-header">
+    <h1 class="page-title">報名表單┃SIGN UP</h1>
+    <hr class="divider">
+  </div>
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdqSG75PAKcAVrVgg8mqJgqRAatIgbDQjkctAjq60HCflNaBg/formResponse" method="POST" target="_blank" class="signup-form">
+    <label for="child-name">小孩姓名 Child's name: </label>
+    <input type="text" id="child-name" name="entry.781115170" required placeholder="請輸入小孩姓名">
+    
+    <label for="email">電子郵件 Email: </label>
+    <input type="email" id="email" name="entry.855090447" required placeholder="請輸入Email">
+    
+    <label for="phone-number">手機號碼 Phone number: </label>
+    <input type="tel" id="phone-number" name="entry.1518588966" required placeholder="請輸入手機號碼">
+    
+    <img src="img/MyQR.jpg" alt="Placeholder" width="120" height="120">
+    
+    <span>Fee: $8 SGD</span>
+    
+    <button type="submit">Submit</button>
+  </form>
+<!-- ...existing code... -->
+  
+<script>
+  const starContainer = document.querySelector('.star-container');
+  const starCount = 30; // 星星數量
+
+  // 生成隨機星星
+  for (let i = 0; i < starCount; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+    // 隨機位置
+    star.style.top = Math.random() * 100 + '%';
+    star.style.left = Math.random() * 100 + '%';
+
+    // 隨機大小
+    const size = Math.random() * 3 + 2; // 2px - 5px
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+
+    // 隨機延遲
+    star.style.animationDelay = (Math.random() * 2) + 's';
+
+    starContainer.appendChild(star);
+  }
+
+  // 定時生成流星
+  function createShootingStar() {
+    const shootingStar = document.createElement('div');
+    shootingStar.classList.add('shooting-star');
+
+    // 隨機起始位置（上方 or 側邊）
+    shootingStar.style.top = Math.random() * 40 + '%';
+    shootingStar.style.left = Math.random() * 100 + '%';
+
+    starContainer.appendChild(shootingStar);
+
+    // 動畫結束後移除
+    setTimeout(() => {
+      shootingStar.remove();
+    }, 2000);
+  }
+
+  // 每 3-6 秒生成一顆流星
+  setInterval(() => {
+    if (Math.random() > 0.5) { // 有一半機率生成，避免太頻繁
+      createShootingStar();
+    }
+  }, 3000);
+</script>
+
+  
+  
+  
+</body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>© Mid-Autumn Art & Fun 中秋好創藝 2025</p>
+    <p>聯絡信箱：peiyidesign@gmail.com</p>
+  </div>
+</footer>
+
+</html>
